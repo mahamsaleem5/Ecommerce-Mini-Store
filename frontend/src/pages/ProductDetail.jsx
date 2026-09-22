@@ -68,7 +68,7 @@ function ProductDetail() {
       <div className="responsive-grid-2">
         <div>
           <img
-            src={`https://ecommerce-mini-storebackend.onrender.com/${product.image}`}
+            src={product.image}
             alt={product.name}
             style={{ width: "100%", borderRadius: "var(--radius)", aspectRatio: "3/4", objectFit: "cover" }}
           />

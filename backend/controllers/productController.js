@@ -36,9 +36,8 @@ exports.createProduct = async (req, res) => {
   try {
     const { name, description, price, sizes, stock } = req.body;
 
-    const image = req.files?.image?.[0] ? `/uploads/${req.files.image[0].filename}` : null;
-    const overlayImage = req.files?.overlayImage?.[0] ? `/uploads/${req.files.overlayImage[0].filename}` : null;
-
+    const image = req.files?.image?.[0]?.path || null;
+    const overlayImage = req.files?.overlayImage?.[0]?.path || null;  
     if (!image) return res.status(400).json({ message: "Product image is required" });
 
     const product = await Product.create({
@@ -64,9 +63,8 @@ exports.updateProduct = async (req, res) => {
     product.price = price ?? product.price;
     product.stock = stock ?? product.stock;
     if (sizes) product.sizes = sizes.split(",").map((s) => s.trim());
-    if (req.files?.image?.[0]) product.image = `/uploads/${req.files.image[0].filename}`;
-    if (req.files?.overlayImage?.[0]) product.overlayImage = `/uploads/${req.files.overlayImage[0].filename}`;
-
+    if (req.files?.image?.[0]) product.image = req.files.image[0].path;
+    if (req.files?.overlayImage?.[0]) product.overlayImage = req.files.overlayImage[0].path;
     const updated = await product.save();
     res.json(updated);
   } catch (error) {

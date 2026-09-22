@@ -66,7 +66,7 @@ export default function TryOnDialog({ product, onClose }) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           personImage: personPhoto,
-          garmentUrl: `https://ecommerce-mini-storebackend.onrender.com/${product.image}`,
+          garmentUrl: product.image,
           garmentType: product.garmentType || "upper_body",
           garmentName: "a long, knee-length traditional kurta, full sleeve, flowing fabric",
         }),

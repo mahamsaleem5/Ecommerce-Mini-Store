@@ -35,7 +35,7 @@ function Cart() {
               }}
             >
               <img
-                src={`http://localhost:5000${item.image}`}
+                src={item.image}
                 alt={item.name}
                 style={{ width: "90px", height: "110px", objectFit: "cover" }}
               />
