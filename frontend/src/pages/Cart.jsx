@@ -23,8 +23,7 @@ function Cart() {
   return (
     <div>
       <h1 className="page-title">Your Cart</h1>
-
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "3rem" }}>
+      <div className="responsive-grid-2 responsive-grid-2--sidebar">
         <div>
           {cartItems.map((item) => (
             <div
@@ -35,6 +34,7 @@ function Cart() {
               }}
             >
               <img
+
                 src={item.image}
                 alt={item.name}
                 style={{ width: "90px", height: "110px", objectFit: "cover" }}
