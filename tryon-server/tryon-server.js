@@ -235,4 +235,5 @@ const server = http.createServer(async (req, res) => {
   res.writeHead(404); res.end();
 });
 
-server.listen(3001, () => console.log("Try-on server on http://localhost:3001"));
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => console.log(`Try-on server on port ${PORT}`));

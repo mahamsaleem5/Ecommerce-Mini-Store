@@ -17,7 +17,7 @@ function ProductCard({ product }) {
     <Link to={`/product/${product._id}`} className="product-card">
       <div className="product-card-image-wrap">
         <img
-          src={`http://localhost:5000${product.image}`}
+          src={`https://ecommerce-mini-storebackend.onrender.com/${product.image}`}
           alt={product.name}
           loading="lazy"
         />

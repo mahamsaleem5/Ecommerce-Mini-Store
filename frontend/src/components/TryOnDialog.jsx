@@ -7,7 +7,7 @@
  */
 import { useRef, useState } from "react";
 
-const TRYON_API = "http://localhost:3001/tryon";
+const TRYON_API = "https://ecommerce-tryon-server.onrender.com/tryon";
 
 // Downscale + compress in the browser so uploads stay fast on a free service.
 async function prepareImage(file) {
@@ -66,7 +66,7 @@ export default function TryOnDialog({ product, onClose }) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           personImage: personPhoto,
-          garmentUrl: `http://localhost:5000${product.image}`,
+          garmentUrl: `https://ecommerce-mini-storebackend.onrender.com/${product.image}`,
           garmentType: product.garmentType || "upper_body",
           garmentName: "a long, knee-length traditional kurta, full sleeve, flowing fabric",
         }),

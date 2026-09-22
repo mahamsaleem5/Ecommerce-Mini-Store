@@ -195,7 +195,7 @@ function AdminProducts() {
                   <tr key={product._id}>
                     <td>
                       <img
-                        src={`http://localhost:5000${product.image}`}
+                        src={`https://ecommerce-mini-storebackend.onrender.com/${product.image}`}
                         alt={product.name}
                         style={{ width: "45px", height: "55px", objectFit: "cover" }}
                       />
