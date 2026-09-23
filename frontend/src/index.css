@@ -361,3 +361,17 @@ th { color: var(--color-text-muted); font-weight: 600; font-size: 0.8rem; text-t
   .footer-columns { grid-template-columns: 1fr; }
   .main-content { padding: 1.2rem 1rem; }
 }
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.75rem;
+  }
+
+  .product-card-name {
+    font-size: 0.9rem;
+  }
+
+  .product-card-price {
+    font-size: 0.8rem;
+  }
+}

@@ -66,13 +66,13 @@ function ProductDetail() {
       </div>
 
       <div className="responsive-grid-2">
-        <div>
-          <img
-            src={product.image}
-            alt={product.name}
-            style={{ width: "100%", borderRadius: "var(--radius)", aspectRatio: "3/4", objectFit: "cover" }}
-          />
-        </div>
+        <div style={{ maxWidth: "420px", margin: "0 auto" }}>
+  <img
+    src={product.image}
+    alt={product.name}
+    style={{ width: "100%", borderRadius: "var(--radius)", aspectRatio: "3/4", objectFit: "cover", display: "block" }}
+  />
+</div>
 
         <div>
           <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.5rem" }}>
